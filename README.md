@@ -5,13 +5,13 @@
 </p>
 
 <h1>OpenVAS Vulnerability Management Tutorial</h1>
-This tutorial outlines the implementation and usage of OpenVAS using Azure Virtual Machines.<br />
+This tutorial outlines the implementation and usage of OpenVAS using Azure Virtual Machines and OpenVAS services.<br />
 
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
-- 
+- OpenVAS
 
 <h2>Operating Systems Used </h2>
 
