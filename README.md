@@ -141,12 +141,14 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -Next, go back to OpenVAS. Go to Configurations click Credentials and create New Credential. Name it something like "Azure VM Credentials", or whatever you decide. Allow insecure use should be set to Yes. Create a username and password and click Save.
+-Next, go to Configuration and open Targets. Clone the vulnerable VM target (click the sheep icon under Actions) and name the clone something like "Azure Vulnerable VMs - Credentialed Scan", or whatever you decide. Under the SMB section of the clone, select Azure VM Credentials -- what we just created prior -- and click Save.
 </p>
 <br />
 
 <p>
 
 ![VAS Credential](https://github.com/Sirdsapes/openVAS/assets/137962934/e794a38f-f9ed-4942-aa2a-28867f76995e)
+![VM Clone](https://github.com/Sirdsapes/openVAS/assets/137962934/c6bb491d-159c-4b8b-ac95-e0b0b20b548d)
 
 </p>
 <p>
