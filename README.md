@@ -176,12 +176,16 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 -Back in the remote desktop, we're going to uninstall the out-of-date programs we installed earlier. Type "uninstall" in the Windows Search Bar and open Add or remove programs.
 -Restart the VM when the programs have finished uninstalling.
 -Back in OpenVAS, perform another credentialed scan. Again, this will take a while.
+-Even though the severity is still high, we can see a downward trend in threats.
+-When we go to the Results page, the number of threats is FAR fewer than the previous scan. You'll also notice no threats from the programs we uninstalled, i.e. Firefox, Adobe Reader, and VLC.
 </p>
 <br />
 
 <p>
 
 ![VM Unin](https://github.com/Sirdsapes/openVAS/assets/137962934/06fba48e-a958-4900-abd0-f163145a5aa4)
+![Second Scan](https://github.com/Sirdsapes/openVAS/assets/137962934/c59b5900-b736-4bb8-8ad6-05820cc6066d)
+![Scan Result](https://github.com/Sirdsapes/openVAS/assets/137962934/a39e925c-34dc-40e4-bd4c-d6cd8e58013e)
 
 </p>
 <p>
