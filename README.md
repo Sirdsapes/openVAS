@@ -155,7 +155,7 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 <p>
 -Go back to Scans and Tasks. Clone the scan we did earlier. Name it something like "Scan - Azure Vulnerable VMs - Credentialed", or whatever you decide. Change Scan Targets from Azure Vulnerable VMs to Azure Vulnerable VMs - Credentialed Scan and click Save.
 -We'll perform a new scan just like before by clicking Start using the clone we just created. Click the Play button and let the scan start. This will likely take longer than the first scan we did. If VAS logs you out, log back in.
--You'll notice a big difference in terms of severity level. In my case, I accidentally forgot to completely turn off the firewalls in the first scan; however, non-credentialed scans don't uncover near as much as credentialed, regardless, because credentialed scans have access to the inner workings of a system or application.
+-You'll notice a big difference in terms of severity level. In my case, I accidentally forgot to completely turn off the firewalls in the first scan; however, non-credentialed scans don't uncover near as much as credentialed, regardless, because credentialed scans have access to the inner workings of a system or application. (see addendum at bottom)
 -Clicking the credentialed report opens it. The Results section shows what threats were detected.
 -We can see, in this instance, Adobe and Firefox showing up quite often. As you recall, these were old versions of programs we installed that aren't as secure/up-to-date as newer versions.
 -If we click one of these vulnerabilities, we get a report on it. VAS will list all relevant information and even has a suggested Solution, or remediation.
@@ -190,7 +190,7 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 
 </p>
 <p>
--That concludes this lab of using OpenVAS to perform a basic vulnerability scan and usage of Azure services to help facilitate this project.
+-That concludes this lab of using OpenVAS to perform a basic vulnerability scan and usage of Azure services to help facilitate this project. Remember to delete all resource groups in Azure to not incur further costs.
 
 -As an addendum, I re-ran a non-credentialed scan to show the base difference when firewalls are truly turned off v. accidentally leaving some on.
 </p>
