@@ -154,22 +154,35 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -Go back to Scans and Tasks. Clone the scan we did earlier. Name it something like "Scan - Azure Vulnerable VMs - Credentialed", or whatever you decide. Change Scan Targets from Azure Vulnerable VMs to Azure Vulnerable VMs - Credentialed Scan and click Save.
--We'll perform a new scan just like before by clicking Start using the clone we just created. Click the Play button and let the scan start. This will likely take longer than the first scan we did.
+-We'll perform a new scan just like before by clicking Start using the clone we just created. Click the Play button and let the scan start. This will likely take longer than the first scan we did. If VAS logs you out, log back in.
+-You'll notice a big difference in terms of severity level. In my case, I accidentally forgot to completely turn off the firewalls in the first scan; however, non-credentialed scans don't uncover near as much as credentialed, regardless.
+-Clicking the credentialed report opens it. The Results section shows what threats were detected.
+-We can see, in this instance, Adobe and Firefox showing up quite often. As you recall, these were old versions of programs we installed that aren't as secure/up-to-date as newer versions.
+-If we click one of these vulnerabilities, we get a report on it. VAS will list all relevant information and even has a suggested Solution, or remediation.
 </p>
 <br />
 
 <p>
 
 ![Clone Task](https://github.com/Sirdsapes/openVAS/assets/137962934/76e169ca-b9bc-465f-82ba-fbb3ade418d3)
+![Clone Scan 2](https://github.com/Sirdsapes/openVAS/assets/137962934/511187c1-0226-4612-a108-84a780ed4102)
+![Clone Threats](https://github.com/Sirdsapes/openVAS/assets/137962934/278f32c8-90d5-4ee3-9b54-5a4ded6d1a09)
+![Clone Threat Info](https://github.com/Sirdsapes/openVAS/assets/137962934/c12d0626-7531-438a-95e7-ce57dcf84585)
+![Clone Solut](https://github.com/Sirdsapes/openVAS/assets/137962934/edd6a516-a5d1-4752-a418-aa2fae3066d2)
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+-Next, we'll remote back into the vulnerable VM -- if it's not connected, already.
+-Back in the remote desktop, we're going to uninstall the out-of-date programs we installed earlier. Type "uninstall" in the Windows Search Bar and open Add or remove programs.
+-Restart the VM when the programs have finished uninstalling.
+-Back in OpenVAS, perform a new credentialed scan.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![VM Unin](https://github.com/Sirdsapes/openVAS/assets/137962934/06fba48e-a958-4900-abd0-f163145a5aa4)
+
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
