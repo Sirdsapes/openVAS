@@ -192,8 +192,10 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 <p>
 -That concludes this lab of using OpenVAS to perform a basic vulnerability scan and usage of Azure services to help facilitate this project. Remember to delete all resource groups in Azure to not incur further costs.
 
--As an addendum, I re-ran a non-credentialed scan to show the base difference when firewalls are truly turned off v. accidentally leaving some on.
+-As an addendum, I re-ran a non-credentialed scan to show the base difference when firewalls are truly turned off v. accidentally leaving some on. Non-credentialed with Private/Public accidentally left on; below is Private/Public turned off.
 </p>
 <br />
+
+![Scan Non Cred](https://github.com/Sirdsapes/openVAS/assets/137962934/206e2754-4e2a-4f4c-8a32-aa57af48c549)
 
 
