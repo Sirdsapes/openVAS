@@ -1,5 +1,7 @@
 <p align="center">
-<img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
+
+![VAS](https://github.com/Sirdsapes/openVAS/assets/137962934/b6f392e5-fb37-4e9b-9b88-4b7fcdfc0719)
+
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
