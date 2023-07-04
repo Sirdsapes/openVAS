@@ -103,7 +103,9 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 -Go back to the Azure portal, open the vulnerable VM and copy the Private IP, not the Public IP. Private IP should be listed under Networking. Paste the IP. You can Comment with the name of the VM or not. Click Save.
 -We then need to create a new Target from the Host we just made. Under Actions click Create New Target. Name the target something like "Vulnerable VMs", or whatever you decide. Leave everything as-is and click Save.
 -Next, go to Scans and Tasks. Create a New Task. Name it something like "Scan - Azure Vulnerable VMs", or whatever you decide. Scan Targets will be the Target we just made, i.e. Azure Vulnerable VMs. Leave everything else as-is and click Save.
-
+-It will keep us in the Task section of OpenVAS. We're going to start a scan of the vulnerable VM. To do this, we need to click Start under the Actions section. Click Start and it will begin scanning. The Status will show Requested and then % it has completed scanning until complete.
+-You can click Last Report to open the scan details.
+-This wasn't a credentialed scan, so nothing was really found. So, we will set up a credentialed scan.
 </p>
 <br />
 
@@ -114,7 +116,30 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 ![VM Vuln Host](https://github.com/Sirdsapes/openVAS/assets/137962934/0b6feda4-8755-4500-842b-e669578f2e7c)
 ![VAS Threat](https://github.com/Sirdsapes/openVAS/assets/137962934/191797cc-aa54-4f8b-9aca-169865574567)
 ![VAS Task](https://github.com/Sirdsapes/openVAS/assets/137962934/cca19b2b-23f6-4842-a147-2c8b57834e0b)
+![VAS Start](https://github.com/Sirdsapes/openVAS/assets/137962934/05f0df1e-18d3-4d8e-9916-b24dcd5b0db1)
+![Scan perc](https://github.com/Sirdsapes/openVAS/assets/137962934/c28f4dc6-2186-49a7-a703-08e6de697e9b)
+![Scan Done](https://github.com/Sirdsapes/openVAS/assets/137962934/6ee455f9-2929-4113-bed6-349566174feb)
+![Scan Report](https://github.com/Sirdsapes/openVAS/assets/137962934/35cf4e72-4aa5-4457-baee-4d694d59b8a4)
 
+</p>
+<p>
+-Go back to the remote desktop connection to the vulnerable VM from before. We need to disable User Account Control and Enable Registry.
+-Open User Account Control Settings and drag it down to Never notify. Click OK.
+</p>
+<br />
+
+<p>
+
+![UAC Set](https://github.com/Sirdsapes/openVAS/assets/137962934/469d49a6-7f0d-4863-9935-f8512dc6adfa)
+
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
