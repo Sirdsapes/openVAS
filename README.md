@@ -125,21 +125,29 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 <p>
 -Go back to the remote desktop connection to the vulnerable VM from before. We need to disable User Account Control and Enable Registry.
 -Open User Account Control Settings and drag it down to Never notify. Click OK.
+-Next, open the Services app. Scroll down to Remote Registry. Double-click and change it from Disabled to Automatic. Click Apply and OK.
+-Next, we'll set up a Registry Key. Open Registry Editor (regedit) as administrator, i.e. right-click and choose Run as administrator.
+-Open HKEY_LOCAL_MACHINE. Open SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System, right-click and create New DWORD (32-bit) Value. Name it LocalAccountTokenFilterPolicy. Set Value to 1.
+-Restart the VM and remote back in.
 </p>
 <br />
 
 <p>
 
 ![UAC Set](https://github.com/Sirdsapes/openVAS/assets/137962934/469d49a6-7f0d-4863-9935-f8512dc6adfa)
+![Remote Reg](https://github.com/Sirdsapes/openVAS/assets/137962934/f8978024-5366-49da-aca0-12b6a0742e21)
+![Reg Edit](https://github.com/Sirdsapes/openVAS/assets/137962934/881804ba-562b-4590-ad54-4821388b2ffb)
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+-Next, go back to OpenVAS. Go to Configurations click Credentials and create New Credential. Name it something like "Azure VM Credentials", or whatever you decide. Allow insecure use should be set to Yes. Create a username and password and click Save.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![VAS Credential](https://github.com/Sirdsapes/openVAS/assets/137962934/e794a38f-f9ed-4942-aa2a-28867f76995e)
+
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
