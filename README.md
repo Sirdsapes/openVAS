@@ -99,13 +99,16 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -Next, we'll go back to the OpenVAS website we signed into earlier. You might need to log back in.
--We need to add the vulnerable VM to OpenVAS. Go to Assets at the top, click Hosts, and then New Host.
+-We need to add the vulnerable VM to OpenVAS. Go to Assets at the top, click Hosts, and then New Host. It will ask for an IP Address. We need to use the Private IP of the vulnerable VM.
+-Go back to the Azure portal, open the vulnerable VM and copy the Private IP, not the Public IP. Private IP should be listed under Networking. Paste the IP. You can Comment with the name of the VM or not. Click OK.
 </p>
 <br />
 
 <p>
 
 ![VAS Host](https://github.com/Sirdsapes/openVAS/assets/137962934/f133c3a8-8bf0-4147-9067-1ffa34873066)
+![VM Priv](https://github.com/Sirdsapes/openVAS/assets/137962934/6dea39f2-6365-42a6-9b3b-a31ce2766ae6)
+![VM Vuln Host](https://github.com/Sirdsapes/openVAS/assets/137962934/0b6feda4-8755-4500-842b-e669578f2e7c)
 
 </p>
 <p>
