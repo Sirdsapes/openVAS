@@ -95,6 +95,7 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 
 ![RDP VM](https://github.com/Sirdsapes/openVAS/assets/137962934/d3d39f7e-aabd-4a8a-b7cd-4434b1677e26)
 ![Remote Firewall](https://github.com/Sirdsapes/openVAS/assets/137962934/bd821abc-a772-43a8-babb-d607b27693be)
+![VM Fire](https://github.com/Sirdsapes/openVAS/assets/137962934/5a9928d9-deac-44c0-a9e4-d02b78d27a1d)
 
 </p>
 <p>
