@@ -100,7 +100,10 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 <p>
 -Next, we'll go back to the OpenVAS website we signed into earlier. You might need to log back in.
 -We need to add the vulnerable VM to OpenVAS. Go to Assets at the top, click Hosts, and then New Host. It will ask for an IP Address. We need to use the Private IP of the vulnerable VM.
--Go back to the Azure portal, open the vulnerable VM and copy the Private IP, not the Public IP. Private IP should be listed under Networking. Paste the IP. You can Comment with the name of the VM or not. Click OK.
+-Go back to the Azure portal, open the vulnerable VM and copy the Private IP, not the Public IP. Private IP should be listed under Networking. Paste the IP. You can Comment with the name of the VM or not. Click Save.
+-We then need to create a new Target from the Host we just made. Under Actions click Create New Target. Name the target something like "Vulnerable VMs", or whatever you decide. Leave everything as-is and click Save.
+-Next, go to Scans and Tasks. Create a New Task. Name it something like "Scan - Azure Vulnerable VMs", or whatever you decide. Scan Targets will be the Target we just made, i.e. Azure Vulnerable VMs. Leave everything else as-is and click Save.
+
 </p>
 <br />
 
@@ -109,6 +112,8 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 ![VAS Host](https://github.com/Sirdsapes/openVAS/assets/137962934/f133c3a8-8bf0-4147-9067-1ffa34873066)
 ![VM Priv](https://github.com/Sirdsapes/openVAS/assets/137962934/6dea39f2-6365-42a6-9b3b-a31ce2766ae6)
 ![VM Vuln Host](https://github.com/Sirdsapes/openVAS/assets/137962934/0b6feda4-8755-4500-842b-e669578f2e7c)
+![VAS Threat](https://github.com/Sirdsapes/openVAS/assets/137962934/191797cc-aa54-4f8b-9aca-169865574567)
+![VAS Task](https://github.com/Sirdsapes/openVAS/assets/137962934/cca19b2b-23f6-4842-a147-2c8b57834e0b)
 
 </p>
 <p>
