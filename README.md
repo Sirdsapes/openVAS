@@ -178,6 +178,7 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 -Back in OpenVAS, perform another credentialed scan. Again, this will take a while.
 -Even though the severity is still high, we can see a downward trend in threats.
 -When we go to the Results page, the number of threats is FAR fewer than the previous scan. You'll also notice no threats from the programs we uninstalled, i.e. Firefox, Adobe Reader, and VLC.
+-If you want to remediate any of these issues, you can always click one and find the solution proposed by OpenVAS and see if it works.
 </p>
 <br />
 
@@ -189,14 +190,10 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+-That concludes this lab of using OpenVAS to perform a basic vulnerability scan and usage of Azure services to help facilitate this project.
+
+-As an addendum, I re-ran a non-credentialed scan to show the base difference when firewalls are truly turned off v. accidentally leaving some on.
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+
