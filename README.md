@@ -31,7 +31,10 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 <p>
 -First thing we'll do is go to the Azure Marketplace and find OpenVAS secured and supported by HOSSTED.
 -We'll select Start with a pre-set configuration.
--We'll use Dev/Test and General purpose.
+-We'll use Dev/Test and General purpose and click Continue to create VM.
+-Create new Resource Group and name it Vulnerability-Management. Name the VM OpenVAS and use a nearby region (keep note of the region you selected). 
+-You might get a warning about Azure Automanage not supporting the OpenVAS image. You'll need to go to Management within the VM and disable Automanage.
+-Change SSH public key setting to Password and create a username and password.
 </p>
 <br />
 
@@ -39,6 +42,9 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
   
 ![OpenVAS Start](https://github.com/Sirdsapes/openVAS/assets/137962934/8008907b-45b6-4520-89ca-94d941f1f8c2)
 ![VAS Dev](https://github.com/Sirdsapes/openVAS/assets/137962934/7bbd5f38-793a-4811-af4e-90c187209d09)
+![Vm Automan](https://github.com/Sirdsapes/openVAS/assets/137962934/7c0ce867-4912-44d9-9c28-99c76a129ace)
+![VAS Vm](https://github.com/Sirdsapes/openVAS/assets/137962934/dd9b61c8-cb2c-4cbc-8897-2d2ec5c52741)
+
 
 </p>
 <p>
