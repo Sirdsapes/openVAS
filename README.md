@@ -68,7 +68,7 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 <p>
 -Next, we'll be creating a new VM that will be vulnerable so we can scan it.
 -Go back to the Azure portal and create a new Virtual Machine.
--The VM will be in the same Resource Group as before, i.e. Vulnerability-Management. Name it something like VM-Vulnerable, or something akin to that, and make sure it's in the same region as OpenVAS that was done earlier. Image will be Windows 10 Pro instead of OpenVAS and the Size should have 2 VCPUs. Make sure to use an easy username/password for now.
+-The VM will be in the same Resource Group as before, i.e. Vulnerability-Management. Name it something like "VM-Vulnerable", or something akin to that, and make sure it's in the same region as OpenVAS that was done earlier. Image will be Windows 10 Pro instead of OpenVAS and the Size should have 2 VCPUs. Make sure to use an easy username/password for now.
 -Click Review + create and Create after validation has passed.
 </p>
 <br />
@@ -85,7 +85,7 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 -Go to the VM we just created, i.e. Win10-Vulnerable, and copy the Public IP address -- just like we did earlier. You can ignore the "status not ready" message.
 -Open Remote Desktop Connection and paste the VM's IP. Enter the username/password you used to create the VM and allow the connection.
 -We'll make this VM vulnerable for scanning. 
--Within the remote connection, open Windows Defender Firewall with Advanced Settings. Click Windows Defender Firewall Properties. Turn the firewall to Off and click OK. Make SURE it's the remote connection and not your own computer.
+-Within the remote connection, open Windows Defender Firewall with Advanced Settings. Click Windows Defender Firewall Properties. Turn the firewall for Domain, Public, and Private to Off and click OK. Make SURE it's the remote connection and not your own computer.
 -Next, we're going to download and install some old software in the remote desktop to get some alerts for our scan later (https://drive.google.com/drive/u/2/folders/1n83ilCjZWZulbDdYnUe9wQPK2buY47_U).
 -Restart the VM after everything has installed properly and leave the VM alone.
 </p>
@@ -150,6 +150,25 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 ![VAS Credential](https://github.com/Sirdsapes/openVAS/assets/137962934/e794a38f-f9ed-4942-aa2a-28867f76995e)
 ![VM Clone](https://github.com/Sirdsapes/openVAS/assets/137962934/c6bb491d-159c-4b8b-ac95-e0b0b20b548d)
 
+</p>
+<p>
+-Go back to Scans and Tasks. Clone the scan we did earlier. Name it something like "Scan - Azure Vulnerable VMs - Credentialed", or whatever you decide. Change Scan Targets from Azure Vulnerable VMs to Azure Vulnerable VMs - Credentialed Scan and click Save.
+-We'll perform a new scan just like before by clicking Start using the clone we just created. Click the Play button and let the scan start. This will likely take longer than the first scan we did.
+</p>
+<br />
+
+<p>
+
+![Clone Task](https://github.com/Sirdsapes/openVAS/assets/137962934/76e169ca-b9bc-465f-82ba-fbb3ade418d3)
+
+</p>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
