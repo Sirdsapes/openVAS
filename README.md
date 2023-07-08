@@ -89,11 +89,17 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -After the VM has successfully deployed, we're going to remote into it. 
+  
 -Go to the VM we just created, i.e. Win10-Vulnerable, and copy the Public IP address -- just like we did earlier. You can ignore the "status not ready" message.
+
 -Open Remote Desktop Connection and paste the VM's IP. Enter the username/password you used to create the VM and allow the connection.
+
 -We'll make this VM vulnerable for scanning. 
+
 -Within the remote connection, open Windows Defender Firewall with Advanced Settings. Click Windows Defender Firewall Properties. Turn the firewall for Domain, Public, and Private to Off and click OK. Make SURE it's the remote connection and not your own computer.
+
 -Next, we're going to download and install some old software in the remote desktop to get some alerts for our scan later (https://drive.google.com/drive/u/2/folders/1n83ilCjZWZulbDdYnUe9wQPK2buY47_U).
+
 -Restart the VM after everything has installed properly and leave the VM alone.
 </p>
 <br />
@@ -107,12 +113,19 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -Next, we'll go back to the OpenVAS website we signed into earlier. You might need to log back in.
+  
 -We need to add the vulnerable VM to OpenVAS. Go to Assets at the top, click Hosts, and then New Host. It will ask for an IP Address. We need to use the Private IP of the vulnerable VM.
+
 -Go back to the Azure portal, open the vulnerable VM and copy the Private IP, not the Public IP. Private IP should be listed under Networking. Paste the IP. You can Comment with the name of the VM or not. Click Save.
+
 -We then need to create a new Target from the Host we just made. Under Actions click Create New Target. Name the target something like "Vulnerable VMs", or whatever you decide. Leave everything as-is and click Save.
+
 -Next, go to Scans and Tasks. Create a New Task. Name it something like "Scan - Azure Vulnerable VMs", or whatever you decide. Scan Targets will be the Target we just made, i.e. Azure Vulnerable VMs. Leave everything else as-is and click Save.
+
 -It will keep us in the Task section of OpenVAS. We're going to start a scan of the vulnerable VM. To do this, we need to click Start under the Actions section. Click Start and it will begin scanning. The Status will show Requested and then % it has completed scanning until complete.
+
 -You can click Last Report to open the scan details.
+
 -This wasn't a credentialed scan, so nothing was really found. So, we will set up a credentialed scan.
 </p>
 <br />
@@ -132,10 +145,15 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -Go back to the remote desktop connection to the vulnerable VM from before. We need to disable User Account Control and Enable Registry.
+  
 -Open User Account Control Settings and drag it down to Never notify. Click OK.
+
 -Next, open the Services app. Scroll down to Remote Registry. Double-click and change it from Disabled to Automatic. Click Apply and OK.
+
 -Next, we'll set up a Registry Key. Open Registry Editor (regedit) as administrator, i.e. right-click and choose Run as administrator.
+
 -Open HKEY_LOCAL_MACHINE. Open SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System, right-click and create New DWORD (32-bit) Value. Name it LocalAccountTokenFilterPolicy. Set Value to 1.
+
 -Restart the VM and remote back in.
 </p>
 <br />
@@ -149,6 +167,7 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -Next, go back to OpenVAS. Go to Configurations click Credentials and create New Credential. Name it something like "Azure VM Credentials", or whatever you decide. Allow insecure use should be set to Yes. Create a username and password and click Save.
+  
 -Next, go to Configuration and open Targets. Clone the vulnerable VM target (click the sheep icon under Actions) and name the clone something like "Azure Vulnerable VMs - Credentialed Scan", or whatever you decide. Under the SMB section of the clone, select Azure VM Credentials -- what we just created prior -- and click Save.
 </p>
 <br />
@@ -161,10 +180,15 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -Go back to Scans and Tasks. Clone the scan we did earlier. Name it something like "Scan - Azure Vulnerable VMs - Credentialed", or whatever you decide. Change Scan Targets from Azure Vulnerable VMs to Azure Vulnerable VMs - Credentialed Scan and click Save.
+  
 -We'll perform a new scan just like before by clicking Start using the clone we just created. Click the Play button and let the scan start. This will likely take longer than the first scan we did. If VAS logs you out, log back in.
+
 -You'll notice a big difference in terms of severity level. In my case, I accidentally forgot to completely turn off the firewalls in the first scan; however, non-credentialed scans don't uncover near as much as credentialed, regardless, because credentialed scans have access to the inner workings of a system or application. (see addendum at bottom)
+
 -Clicking the credentialed report opens it. The Results section shows what threats were detected.
+
 -We can see, in this instance, Adobe and Firefox showing up quite often. As you recall, these were old versions of programs we installed that aren't as secure/up-to-date as newer versions.
+
 -If we click one of these vulnerabilities, we get a report on it. VAS will list all relevant information and even has a suggested Solution, or remediation.
 </p>
 <br />
@@ -180,11 +204,17 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -Next, we'll remote back into the vulnerable VM -- if it's not connected, already.
+  
 -Back in the remote desktop, we're going to uninstall the out-of-date programs we installed earlier. Type "uninstall" in the Windows Search Bar and open Add or remove programs.
+
 -Restart the VM when the programs have finished uninstalling.
+
 -Back in OpenVAS, perform another credentialed scan. Again, this will take a while.
+
 -Even though the severity is still high, we can see a downward trend in threats.
+
 -When we go to the Results page, the number of threats is FAR fewer than the previous scan. You'll also notice no threats from the programs we uninstalled, i.e. Firefox, Adobe Reader, and VLC.
+
 -If you want to remediate any of these issues, you can always click one and find the solution proposed by OpenVAS and see if it works.
 </p>
 <br />
