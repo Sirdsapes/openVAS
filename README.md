@@ -22,12 +22,19 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 
 <p>
 -First thing we'll do is go to the Azure Marketplace and find OpenVAS secured and supported by HOSSTED.
+  
 -We'll select Start with a pre-set configuration.
+
 -We'll use Dev/Test and General purpose and click Continue to create VM.
--Create new Resource Group and name it Vulnerability-Management. Name the VM OpenVAS and use a nearby region (keep note of the region you selected). 
+
+-Create new Resource Group and name it Vulnerability-Management. Name the VM OpenVAS and use a nearby region (keep note of the region you selected).
+
 -You might get a warning about Azure Automanage not supporting the OpenVAS image. You'll need to go to Management within the VM and disable Automanage.
+
 -Change SSH public key setting to Password and create a username and password.
+
 -Click Review + create and click Next until you get to the Monitoring section and disable Boot diagnostics.
+
 -Click Review + create and then Create when validation has passed.
 </p>
 <br />
@@ -43,9 +50,13 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -Once that is done deploying, open PowerShell in Windows or Terminal in Mac.
+  
 -Open the OpenVAS VM we just created and copy the Public IP address.
+
 -Go back to PowerShell and type in "ssh (username used for VM)@(VM's Public IP)" -- without quotations -- and type yes when asked if you want to continue connecting and enter the password you used when creating the VM.
+
 -Two things to keep of note: underneath HOSSTED, it will list an https:// address to access OpenVAS and underneath that it will list the username and password to access it.
+
 -Open a new window in your internet browser and paste the https link. Login using the username/password given in the terminal.
 </p>
 <br />
@@ -60,8 +71,11 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 </p>
 <p>
 -Next, we'll be creating a new VM that will be vulnerable so we can scan it.
+  
 -Go back to the Azure portal and create a new Virtual Machine.
+
 -The VM will be in the same Resource Group as before, i.e. Vulnerability-Management. Name it something like "VM-Vulnerable", or something akin to that, and make sure it's in the same region as OpenVAS that was done earlier. Image will be Windows 10 Pro instead of OpenVAS and the Size should have 2 VCPUs. Make sure to use an easy username/password for now.
+
 -Click Review + create and Create after validation has passed.
 </p>
 <br />
