@@ -17,6 +17,12 @@ This tutorial outlines the implementation and usage of OpenVAS using Azure Virtu
 
 - Windows 10 (21H2)
 
+<h2>High-Level Deployment and Configuration Steps</h2>
+
+- Creating necessary Virtual Machines in Azure to install OpenVAS and to set up a target Virtual Machine.
+- Remotely connecting to Virtual Machines.
+- Running a vulnerability scan using OpenVAS on a non-secure Virtual Machine and remediating issues.
+
 <h2>Deployment and Configuration Steps</h2>
 
 
